@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+
+    <link href='packages/core/main.css' rel='stylesheet' />
+    <link href='packages/daygrid/main.css' rel='stylesheet' />
+
+    <script src='packages/core/main.js'></script>
+    <script src='packages/daygrid/main.js'></script>
+
+    <script src='packages/google-calendar/main.js'></script>
+
+
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          plugins: [ 'dayGrid','googleCalendar' ],
+
+  googleCalendarApiKey: 'AIzaSyB-UIEUd-bq6O3e2TNrR4aJz_aZEnnW_4U',
+  events: {
+    googleCalendarId: 'nellothe1@gmail.com'
+  }
+        });
+
+        calendar.render();
+      });
+
+    </script>
+    <h2>
+      This is Anthony's Calendar for IS218!
+    </h2>
+
+  </head>
+  <body>
+
+    <div id='calendar'></div>
+
+
+
+  </body>
+</html>
